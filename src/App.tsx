@@ -2,7 +2,6 @@ import QuizSelector from "./components/QuizSelector";
 import ProgressBar from "./components/ProgressBar";
 import QuestionCard from "./components/QuestionCard";
 import ResultScreen from "./components/ResultScreen";
-import MissingPopup from "./components/MissingPopup";
 import { useQuiz } from "./hooks/useQuiz";
 import MissingModal from "./components/MissingModal";
 
