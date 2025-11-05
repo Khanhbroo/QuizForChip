@@ -1489,4 +1489,300 @@ export const questions = [
     ],
     answer: 0,
   },
+  {
+    id: 126,
+    question:
+      "Tại sao ISO 9241-115 khuyến nghị duy trì vòng đời phát triển liên tục trong tổ chức?",
+    options: [
+      "Vì ứng dụng luôn được cải tiến dựa trên việc phản hồi người dùng và thay đổi nhu cầu thực tế.",
+      "Vì giúp tăng tốc độ phát triển mà không cần phải đánh giá lại trải nghiệm của người dùng.",
+      "Vì định nghĩa bảo trì hệ thống ổn định mà người dùng cuối cùng không cần phải tham gia.",
+      "Vì cho phép giảm chi phí vận hành và loại bỏ hoàn toàn theo hệ thống kiểm tra yêu cầu.",
+    ],
+    answer: 0,
+  },
+  {
+    id: 127,
+    question:
+      "Nhận định nào dưới đây không phải là lưu cần quan tâm khi xác định người dùng?",
+    options: [
+      "Những người dùng khác nhau có những yêu cầu khác nhau dựa trên nhiệm vụ họ cần thực hiện và đặc tính của họ",
+      "Một cá nhân có thể là thành viên của một hoặc nhiều nhóm người dùng",
+      "Nhóm người dùng nào đang có giá chi phí cao nhất của hệ thống",
+      "Cần xem xét ai là người cung cấp nội dung, ai là người sử dụng nội dung",
+    ],
+    answer: 2,
+  },
+  {
+    id: 128,
+    question:
+      "Trong thực tế, khi doanh nghiệp phát triển trang web có cơ sở dữ liệu, lợi ích lớn nhất về trải nghiệm người dùng là gì?",
+    options: [
+      "Người dùng có thể xem nội dung quảng cáo và thông tin khuyến mãi.",
+      "Người dùng có thể lưu thông tin, theo dõi đơn hàng và nhận phản hồi cá nhân.",
+      "Người dùng chỉ có thể điền biểu mẫu yêu cầu gửi nhưng không nhận được phản hồi.",
+      "Người dùng có thể truy cập ẩn danh mà không cần xác thực tài khoản.",
+    ],
+    answer: 1,
+  },
+  {
+    id: 129,
+    question:
+      "Nhận định nào sau đây thể hiện đúng mối quan hệ giữa hệ thống thử nghiệm và kiểm soát chất lượng?",
+    options: [
+      "Thử nghiệm là công cụ hoạt động trong kiểm tra chất lượng, giúp phát hiện lỗi và xác định khả năng đáp ứng yêu cầu của hệ thống trước khi vận hành.",
+      "Thử nghiệm chỉ thực hiện để phục vụ danh sách mục tiêu, không ảnh hưởng đến kiểm tra chất lượng.",
+      "Kiểm tra chất lượng chỉ tiến hành sau khi hoàn thành thử nghiệm toàn bộ giai đoạn.",
+      "Thử nghiệm và kiểm soát chất lượng là hai quá trình độc lập, không có mối liên hệ trong thực tế.",
+    ],
+    answer: 0,
+  },
+  {
+    id: 130,
+    question: "Chi phí hữu ích điển hình có những chi phí gì?",
+    options: [
+      "Chi phí phát triển, chi phí hoạt động, các khoản phí tiết kiệm được, cải tiến khả năng thu lợi",
+      "Chi phí phát triển, chi phí hoạt động, các khoản phí tiết kiệm được",
+      "Chi phí phát triển, chi phí hoạt động, các khoản phí tiết kiệm được, cải tiến khả năng thu lợi, chi phí duy trì",
+      "Chi phí phát triển, chi phí hoạt động, cải thiện khả năng thu lợi",
+    ],
+    answer: 0,
+  },
+  {
+    id: 131,
+    question: "Nội dung cần xác định là nội dung người dùng cần làm gì?",
+    options: [
+      "Thực hiện các tác vụ và luôn hữu ích cho cả người dùng và tác vụ",
+      "Thực hiện các tác vụ",
+      "Phân chia các tác vụ và luôn có ích cho cả người dùng và tác vụ",
+      "Phân tích các tác vụ",
+    ],
+    answer: 0,
+  },
+  {
+    id: 132,
+    question:
+      "Vai trò chủ yếu của thiết kế tương tác người – hệ thống theo ISO 9241-115:2024 có thể hiện thực như thế nào trong việc phát triển hệ thống thu hút người dùng làm trung tâm?",
+    options: [
+      "Là cầu nối giữa mô hình khái niệm và thiết kế giao diện chi tiết, giúp hệ thống dễ học, dễ nhớ, dễ sử dụng, giảm thiểu lỗi, tăng cường trải nghiệm cho người dùng.",
+      "Là hoạt động thiết kế hạ tầng mạng, lựa chọn máy chủ, thiết bị lưu trữ và giải pháp bảo mật để đảm bảo an toàn và ổn định cho toàn bộ hệ thống.",
+      "Là quá trình đánh giá nhu cầu tổ chức, lập kế hoạch nguồn lực, xác định chi phí đầu tư và thời gian thực hiện để đảm bảo tính khả thi của hệ thống phát triển dự án.",
+      "Là bước phát triển khai báo và kiểm tra các công cụ cài đặt để đảm bảo hệ thống hoạt động chính xác, có khả năng mở rộng và tương thích với nhiều nền tảng khác nhau.",
+    ],
+    answer: 0,
+  },
+  {
+    id: 133,
+    question:
+      "Khái niệm Chu trình phát triển hệ thống hướng tới người dùng (Vòng đời lấy con người làm trung tâm) trong ISO 9241-115:2024 là gì?",
+    options: [
+      "Là mô hình phát triển theo hướng dẫn kỹ thuật, chỉ chú ý đến cài đặt và kiểm tra tự động mà không cần lấy ý kiến người dùng.",
+      "Là mô hình phát triển theo chu trình Thiết kế – Xây dựng – Kiểm tra – Phản hồi – Cải tiến, đảm bảo hệ thống được cải thiện liên tục dựa trên trải nghiệm và phản hồi của người dùng thực tế.",
+      "Là mô hình quản lý tập trung vào công việc kiểm soát chi phí, thời gian và nhân sự trong toàn bộ vòng đời phát triển phần mềm.",
+      "Là mô hình định nghĩa tiêu chuẩn bảo mật, quy trình sao lưu dữ liệu và khôi phục hệ thống khi xảy ra sự cố kỹ thuật.",
+    ],
+    answer: 1,
+  },
+  {
+    id: 134,
+    question:
+      "Một giao diện đạt chuẩn 'nhìn và cảm nhận' trong thiết kế kỹ thuật cần đảm bảo yếu tố nào?",
+    options: [
+      "Giới hạn các đồ họa ứng dụng nhằm tăng tốc độ xử lý của phần mềm.",
+      "Duy trì tính nhất quán về hiển thị, hành vi và cảm nhận trên mọi nền tảng và thiết bị.",
+      "Tập trung vào nguồn mã tối ưu, giảm dung lượng tệp và tải trang nhanh hơn.",
+      "Ưu tiên yếu tố kỹ thuật hơn trải nghiệm để giảm chi phí bảo trì hệ thống.",
+    ],
+    answer: 1,
+  },
+  {
+    id: 135,
+    question:
+      "Theo ISO 9241-115:2024, mục tiêu chính xác thực trong quá trình xây dựng hệ thống là gì?",
+    options: [
+      "Là tiến trình đo lường hiệu suất của máy chủ, xác định tiêu thụ tài nguyên và tốc độ xử lý dữ liệu.",
+      "Xây dựng dữ liệu mô hình, cơ sở dữ liệu tối ưu và đảm bảo an toàn thông tin trong vận hành hệ thống.",
+      "Là thực hiện kiểm tra người dùng ở từng giai đoạn phát triển, thu thập phản hồi thực tế để điều chỉnh giao diện và luồng tương tác, đảm bảo hệ thống dễ học, dễ sử dụng và giảm lỗi.",
+      "Là phân tích chi phí đầu tư, xác định lợi nhuận kỳ vọng và đánh giá khả năng tài chính trước triển khai chính thức.",
+    ],
+    answer: 2,
+  },
+  {
+    id: 136,
+    question:
+      "Theo quan điểm của Rumbaugh, mô hình nào dưới đây có thể hiển thị các thay đổi trạng thái của đối tượng và quan hệ của chúng qua thời gian?",
+    options: [
+      "Mô hình dữ liệu luồng mô tả chức năng giữa quá trình và kết quả biến đổi thông tin.",
+      "Mô hình cấu hình mô tả các thành phần kỹ thuật chính và mối liên kết giữa các mô-đun phần mềm.",
+      "Mô hình dữ liệu mô tả liên kết dữ liệu bảng, khóa chính và khóa ngoại trong cơ sở dữ liệu.",
+      "Mô hình mô tả sự thay đổi trạng thái của các đối tượng khi phản ứng với sự kiện, hiển thị qua biểu đồ trạng thái hoặc biểu đồ tuần tự UML.",
+    ],
+    answer: 3,
+  },
+  {
+    id: 137,
+    question:
+      "Vì sao thiết kế luồng tương tác có vai trò quan trọng trong việc nâng cao trải nghiệm của người dùng?",
+    options: [
+      "Vì nó hỗ trợ quản lý phân quyền và kiểm soát quyền truy cập.",
+      "Vì nó cho phép nhà phát triển xác định phần cứng phù hợp.",
+      "Vì nó giúp duy trì logic tương tác mạch lạc, giảm tải nhận thức và định hướng người dùng đạt mục tiêu.",
+      "Vì nó đảm bảo tính ổn định kỹ thuật và tăng hiệu quả xử lý dữ liệu.",
+    ],
+    answer: 2,
+  },
+  {
+    id: 138,
+    question:
+      "Vì sao truyền thông người – hệ thống có vai trò trung tâm trong trải nghiệm người dùng?",
+    options: [
+      "Vì nó giúp chuẩn hóa kỹ thuật thông tin và đảm bảo bảo mật.",
+      "Vì nó giúp người dùng nhận phản hồi rõ ràng, giảm lỗi thao tác và tăng cảm giác kiểm soát hệ thống.",
+      "Vì nó cho phép nhà phát triển điều chỉnh cấu trúc dữ liệu phù hợp vận hành.",
+      "Vì nó tối ưu tốc độ xử lý mạng và giảm dung lượng lưu trữ dữ liệu.",
+    ],
+    answer: 1,
+  },
+  {
+    id: 139,
+    question:
+      "Khi nâng cấp ứng dụng TMĐT, nhóm phát triển chỉ cần cập nhật giao diện mô-đun mà không cần xây dựng lại toàn bộ hệ thống. Tình huống này phản ánh nguyên tắc nào của ISO 9241-115:2024?",
+    options: [
+      "Bảo đảm tính chắc chắn của hệ thống theo vòng đời thông qua thiết kế mở rộng, dễ bảo trì và tái sinh bằng mẫu thiết kế có sẵn.",
+      "Duy trì tính năng giao diện tốt nhất để tăng khả năng nhận dạng thương hiệu.",
+      "Xác thực phản hồi người dùng để điều chỉnh giao diện trong giai đoạn thực hiện.",
+      "Kiểm tra khả năng truy cập người dùng ở nhiều tuổi và trạng thái khác nhau.",
+    ],
+    answer: 0,
+  },
+  {
+    id: 140,
+    question: "Nhóm người dùng 'who' trong hệ thống TMĐT có ý nghĩa gì?",
+    options: [
+      "Thông tin nội dung được cung cấp và hiển thị qua hệ thống",
+      "Các công cụ được sử dụng để thực hiện tác vụ",
+      "Các nhiệm vụ có thể được hoàn thành bởi một người hoặc nhóm",
+      "Những người sử dụng hệ thống và các đối tượng liên quan",
+    ],
+    answer: 3,
+  },
+  {
+    id: 141,
+    question:
+      "Trước khi đánh giá khả năng tính toán của hệ thống TMĐT, phát triển cần xác định phương án nào có thể xảy ra?",
+    options: [
+      "Không làm được gì cả; Cải tiến hệ thống đang tồn tại; Mua lại hoặc sao chép hệ thống có sẵn",
+      "Mua lại hoặc sao chép hệ thống có sẵn; Phát triển hệ thống Firmware mới bền vững",
+      "Không làm được gì cả; Hệ thống tiến trình đang tồn tại",
+      "Không làm được gì cả; Cải tiến hệ thống hiện tại; Mua lại hoặc sao chép hệ thống có sẵn; Phát triển hệ thống Firmware mới",
+    ],
+    answer: 3,
+  },
+  {
+    id: 142,
+    question:
+      "Định nghĩa nào sau đây phản ánh đúng bản chất của thử nghiệm hoạt động?",
+    options: [
+      "Thử nghiệm là quá trình tự động hóa hoàn toàn để kiểm tra khả năng và bảo mật.",
+      "Thử nghiệm là quá trình nhằm phát hiện lỗi, đánh giá chất lượng và xác thực thiết kế trước khi đưa vào sử dụng.",
+      "Thử nghiệm là giai đoạn kiểm tra ngẫu nhiên để phát hiện lỗi trong quá trình cài đặt.",
+      "Thử nghiệm chỉ tập trung kiểm tra giao diện người dùng của hệ thống.",
+    ],
+    answer: 1,
+  },
+  {
+    id: 143,
+    question: "Các nhóm người dùng thường khác biệt đáng kể ở đâu?",
+    options: [
+      "Thuộc tính nhân khẩu học",
+      "Khả năng nhận biết",
+      "Tất cả đáp án trên",
+      "Khả năng thực hiện",
+    ],
+    answer: 2,
+  },
+  {
+    id: 144,
+    question:
+      "Hệ thống thiết kế được sử dụng trong phát triển đa nền tảng có vai trò gì theo ISO 9241-115:2024?",
+    options: [
+      "Là tập hợp các thuật toán AI tự động hóa công việc thiết kế giao diện.",
+      "Là mô hình quản trị dự án thúc đẩy tiến độ và kiểm tra năng suất nhóm.",
+      "Là hệ thống hướng dẫn tốt nhất về màu sắc, biểu tượng, bố cục và tương tác, duy trì tính nhất quán giữa Web, App và Mobile.",
+      "Là công cụ tăng tốc xử lý dữ liệu và tối ưu mạng lưới ứng dụng.",
+    ],
+    answer: 2,
+  },
+  {
+    id: 145,
+    question:
+      "Cơ sở khác biệt giữa giai đoạn phân tích và thiết kế tổng thể trong phát triển hệ thống TMĐT là gì?",
+    options: [
+      "Phân tích chú ý yếu tố kỹ thuật, thiết kế tổng thể chỉ quan tâm thẩm mỹ giao diện.",
+      "Phân tích sau khi hệ thống được xây dựng, thiết kế tổng thể có thể tiến hành trước xác định yêu cầu người dùng.",
+      "Phân tích tập tin để kiểm tra phần mềm, thiết kế tổng thể tập trung vào cài đặt mô-đun cụ thể.",
+      "Phân tích để nhận dạng yêu cầu hệ thống, thiết kế tổng thể kết hợp các yêu cầu đó thành cấu trúc hợp nhất, tối ưu hiệu quả toàn hệ thống.",
+    ],
+    answer: 3,
+  },
+  {
+    id: 146,
+    question:
+      "Vì sao kết hợp các phương tiện như văn bản, hình ảnh, video, âm thanh được coi là quan trọng trong thiết kế kỹ thuật theo ISO 9241-115?",
+    options: [
+      "Vì trình bày hấp dẫn hơn để tăng lượng truy cập.",
+      "Vì giúp nhà phát triển quản lý dữ liệu và cập nhật nội dung dễ dàng.",
+      "Vì giúp giảm dung lượng hiển thị và tốc độ tải trang.",
+      "Vì hỗ trợ nhiệm vụ người dùng trực diện hơn, tăng khả năng hiểu, giảm tải nhận thức và tạo trải nghiệm tích cực.",
+    ],
+    answer: 3,
+  },
+  {
+    id: 147,
+    question:
+      "Yếu tố 'với những gì' trong mô tả mẫu của nhóm người dùng đề cập đến điều gì?",
+    options: [
+      "Name các mảng nội dung",
+      "Lợi ích từ công việc đáp ứng nhu cầu của thành viên",
+      "Tác vụ được thực hiện bởi người dùng nhóm",
+      "Khả năng đáp ứng nhu cầu của nhóm",
+    ],
+    answer: 0,
+  },
+  {
+    id: 148,
+    question:
+      "Theo hướng tiếp cận con người làm trung tâm, mục tiêu quan trọng nhất khi xây dựng hệ thống là gì?",
+    options: [
+      "Tập trung vào yếu tố kỹ thuật như tốc độ máy chủ và mở rộng hệ thống, không cần quan tâm người dùng.",
+      "Hiện thực hóa các thiết kế tương tác, thông tin và điều hướng trong sản phẩm cuối cùng, đảm bảo trải nghiệm đúng như mô hình đã phê duyệt.",
+      "Phát triển nhanh bằng cách rút ngắn chu kỳ kiểm tra và giảm bước xác thực.",
+      "Tạo sản phẩm nhiều tính năng phức tạp để đáp ứng tất cả nhóm người dùng mà không cần phân tích chi tiết.",
+    ],
+    answer: 1,
+  },
+  {
+    id: 149,
+    question:
+      "Trong bước 'Thực hiện kế hoạch', điều gì cần chú ý để đảm bảo phát triển thành công?",
+    options: [
+      "Sự phối hợp hợp nhất giữa các nhóm dưới điều hành của ban quản lý dự án.",
+      "Tập trung vào báo cáo kết quả thay vì theo dõi tiến độ.",
+      "Tốc độ cài đặt phần mềm nhanh nhất để rút ngắn thời gian.",
+      "Phân quyền cho từng cá nhân tự thực hiện theo cách riêng để tăng tính linh hoạt.",
+    ],
+    answer: 3,
+  },
+  {
+    id: 150,
+    question:
+      "Người dùng Shopee hoặc Tiki dễ dàng nhận ra giao diện, biểu tượng và quy trình đặt hàng giống nhau giữa web và ứng dụng. Điều này thể hiện yêu cầu nào trong ISO 9241-115:2024?",
+    options: [
+      "Xác thực khả năng sử dụng bằng cách kiểm tra phản hồi người dùng trong suốt quá trình phát triển.",
+      "Duy trì mức độ nhất quán giữa Web - App - Mobile để đảm bảo trải nghiệm đồng bộ và giảm gánh nặng nhận thức khi chuyển đổi thiết bị.",
+      "Đảm bảo tính chắc chắn với mô hình vòng đời lấy con người làm trung tâm trong quy trình thiết kế.",
+      "Kiểm tra khả năng truy cập và hiệu suất để cải thiện tốc độ và phản hồi hệ thống.",
+    ],
+    answer: 1,
+  },
 ];

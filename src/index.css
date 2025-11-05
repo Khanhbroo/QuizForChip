@@ -19,3 +19,42 @@ body {
 .animate-fade {
   animation: fade 0.5s ease-in-out;
 }
+
+@keyframes shake {
+  0% {
+    transform: translateX(0);
+  }
+  20% {
+    transform: translateX(-6px);
+  }
+  40% {
+    transform: translateX(6px);
+  }
+  60% {
+    transform: translateX(-4px);
+  }
+  80% {
+    transform: translateX(4px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+.animate-shake {
+  animation: shake 0.45s ease;
+}
+
+.quiz-flip {
+  transition: transform 0.35s ease, opacity 0.35s;
+  transform-style: preserve-3d;
+}
+
+.flip-out {
+  transform: rotateY(90deg);
+  opacity: 0;
+}
+
+.flip-in {
+  transform: rotateY(-90deg);
+  opacity: 0;
+}
