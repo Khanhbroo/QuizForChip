@@ -4,7 +4,77 @@ import QuestionCard from "./components/QuestionCard";
 import ResultScreen from "./components/ResultScreen";
 import MissingModal from "./components/MissingModal";
 import { useQuiz } from "./hooks/useQuiz";
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
+
+// ✅ 10 câu random
+const FAST_MESSAGES = [
+  "Nhanh dữ 😎",
+  "Ghê đấy ⚡",
+  "Tốc độ 😤",
+  "Đỉnh nha ✨",
+  "Siêu thật 🤯",
+  "Thần số học? 🤖",
+  "Auto đúng ✅",
+  "Không trượt 😎",
+  "Thôi xong 😂",
+  "Căng ghê 😳",
+  "Hết hồn 😨",
+  "Kinh vậy 😱",
+  "Quá lẹ 💨",
+  "Vi diệu 🤯",
+  "Đỉnh vãi 😤",
+  "Quá hay ⭐",
+  "Sốc thật 🤯",
+  "Hết nói 🤐",
+  "Chất chơi 😎",
+  "Má ơi 😭",
+];
+
+// ✅ 20 icon random
+const FIRE_ICONS = [
+  "🔥",
+  "⚡",
+  "💥",
+  "✨",
+  "💣",
+  "🌋",
+  "☄️",
+  "🔱",
+  "🔥🔥",
+  "⚡⚡",
+  "💥💥",
+  "🔥⚡",
+  "💫",
+  "🌟",
+  "⭐",
+  "🧨",
+  "💨",
+  "🚀🔥",
+  "🚀💨",
+  "🔥😤",
+];
+const ROCKET_ICONS = [
+  "🚀",
+  "🛸",
+  "✈️",
+  "🚁",
+  "💫",
+  "✨",
+  "☄️",
+  "💥",
+  "🔺",
+  "🪂",
+  "📡",
+  "🌠",
+  "🛰️",
+  "🚀💨",
+  "🚀✨",
+  "🚀🔥",
+  "🚀⭐",
+  "🚀⚡",
+  "🛠️",
+  "🧭",
+];
 
 export default function App() {
   const {
@@ -36,12 +106,29 @@ export default function App() {
   const speedRef = useRef<HTMLDivElement | null>(null);
   const ultraRef = useRef<HTMLDivElement | null>(null);
 
+  const [fastText, setFastText] = useState("Nhanh ghê! 😎");
+  const [fireIcon, setFireIcon] = useState("🔥");
+  const [rocketIcon, setRocketIcon] = useState("🚀");
+
   // Tạo spark 1 lần khi fastMode bật
   useEffect(() => {
     if (!fastMode) return;
 
-    // Trigger CSS animation
-    const play = (ref: any, css: string) => {
+    // ✅ random câu text
+    setFastText(
+      FAST_MESSAGES[Math.floor(Math.random() * FAST_MESSAGES.length)]
+    );
+
+    // ✅ random icon lửa
+    setFireIcon(FIRE_ICONS[Math.floor(Math.random() * FIRE_ICONS.length)]);
+
+    // ✅ random icon rocket
+    setRocketIcon(
+      ROCKET_ICONS[Math.floor(Math.random() * ROCKET_ICONS.length)]
+    );
+
+    // chạy animation như cũ
+    const play = (ref: React.RefObject<HTMLDivElement>, css: string) => {
       if (!ref.current) return;
       ref.current.classList.remove(css);
       void ref.current.offsetWidth;
@@ -51,25 +138,6 @@ export default function App() {
     play(fastRef, "animate-pop");
     play(speedRef, "animate-fire-blast");
     play(ultraRef, "animate-rocket-fly");
-
-    // tạo spark chỉ 1 lần khi fastMode kích hoạt
-    const sparkContainer = document.getElementById("spark-container");
-    if (sparkContainer) {
-      sparkContainer.innerHTML = "";
-      for (let i = 0; i < 6; i++) {
-        const spark = document.createElement("div");
-        spark.className = "spark";
-        spark.style.left = `${40 + Math.random() * 20}%`;
-        spark.style.top = `${60 + (Math.random() * 20 - 10)}%`;
-        spark.textContent = "✨";
-        sparkContainer.appendChild(spark);
-      }
-
-      // Tự biến mất sau 1s
-      setTimeout(() => {
-        sparkContainer.innerHTML = "";
-      }, 800);
-    }
   }, [fastMode]);
 
   return (
@@ -102,7 +170,7 @@ export default function App() {
     font-bold text-nowrap
   "
       >
-        ⭐ Nhanh ghê! 😎
+        {fastText}
       </div>
 
       {/* 🔥 lửa bùng mạnh */}
@@ -118,7 +186,7 @@ export default function App() {
     drop-shadow-lg
   "
       >
-        🔥
+        {fireIcon}
       </div>
 
       {/* 🚀 bay ngang */}
@@ -134,7 +202,7 @@ export default function App() {
     drop-shadow-lg
   "
       >
-        🚀
+        {rocketIcon}
       </div>
 
       {/* container tia lửa */}

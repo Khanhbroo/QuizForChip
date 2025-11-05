@@ -24,6 +24,24 @@ export default function ResultScreen({
           Bạn trả lời đúng <b className="text-pink-600">{score}</b> /{" "}
           {selectedQuestions.length} câu
         </p>
+
+        {/* ✅ COMMENT THEO ĐIỂM */}
+        <div className="mt-4 text-lg font-semibold text-pink-700">
+          {score < 10 && <p>Chưa tài đâu con ạ, con non lắm 😏</p>}
+
+          {score >= 10 && score < 15 && <p>Cũng được đó 😌 cố thêm tí nữa!</p>}
+
+          {score >= 15 && score < 20 && <p>Ghê nha! Học bổng gọi tên 🎓⚡</p>}
+
+          {score >= 20 && score < 25 && <p>Siêu cấp tốc độ! 🧠💨 Quá dữ!</p>}
+
+          {score === 25 && (
+            <p className="text-green-600 text-xl font-extrabold">
+              Vô đối! 🚀🔥 Google cũng xin thua bạn 🤯
+            </p>
+          )}
+        </div>
+
         <button
           className="mt-6 px-6 py-3 bg-pink-300 hover:bg-pink-400 rounded-2xl text-pink-900 font-bold"
           onClick={() => window.location.reload()}
