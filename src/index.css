@@ -1,8 +1,92 @@
 @import "tailwindcss";
 
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation: none !important;
+    transition: none !important;
+  }
+}
+
 body {
   font-family: "Quicksand", "Comic Sans MS", sans-serif;
-  background: #ffdce6;
+  background: radial-gradient(circle at top left, #ffecf2, #ffd1df, #ffc2d6);
+  background-attachment: fixed;
+  overflow-x: hidden;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background-image: url("https://cdn.jsdelivr.net/gh/twitter/twemoji/assets/72x72/1f338.png"),
+    url("https://cdn.jsdelivr.net/gh/twitter/twemoji/assets/72x72/1f36c.png"),
+    url("https://cdn.jsdelivr.net/gh/twitter/twemoji/assets/72x72/1f9e1.png");
+  background-repeat: no-repeat;
+  background-size: 45px 45px;
+  background-position: 10% 80%, 80% 15%, 60% 90%;
+  opacity: 0.15;
+  animation: floatBg 8s alternate infinite ease-in-out;
+  pointer-events: none;
+}
+
+@keyframes floatBg {
+  0% {
+    transform: translateY(0px);
+  }
+  100% {
+    transform: translateY(-25px);
+  }
+}
+
+/* Pop khi bấm nút */
+.button-pop:active {
+  transform: scale(0.94);
+  transition: 0.1s;
+}
+
+/* Card mượt như đồ chơi */
+.quiz-card {
+  background: linear-gradient(180deg, #fff 0%, #fff7fb 100%);
+  border-radius: 24px;
+  box-shadow: 0 6px 18px rgba(255, 90, 159, 0.22);
+  border: 3px solid #ffc7db;
+  transition: transform 0.25s, box-shadow 0.25s;
+}
+.quiz-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 22px rgba(255, 90, 159, 0.25);
+}
+
+.kawaii-btn {
+  border-radius: 14px;
+  border: 2px solid #f9a8c6;
+  background: #ffe0eb;
+  color: #8a1f50;
+  padding: 12px 16px;
+  font-weight: 700;
+  transition: transform 0.12s, background 0.2s;
+}
+.kawaii-btn:hover {
+  background: #ffd1e1;
+}
+.kawaii-btn:active {
+  transform: scale(0.96);
+}
+
+/* tăng vùng chạm cho mobile */
+@media (max-width: 640px) {
+  .kawaii-btn {
+    padding: 14px 18px;
+    font-size: 15px;
+  }
+}
+
+/* Làm Progress đẹp hơn */
+.progress-dot {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  transition: 0.25s;
 }
 
 @keyframes fade {

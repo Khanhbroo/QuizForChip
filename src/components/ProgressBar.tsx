@@ -12,7 +12,7 @@ export default function ProgressBar({
   setCurrent,
 }: ProgressBarProps) {
   return (
-    <div className="flex flex-wrap justify-center gap-1 w-11/12 md:w-2/3">
+    <div className="flex flex-wrap justify-center gap-1.5 w-11/12 md:w-2/3">
       {selectedQuestions.map((_, idx) => {
         const isAnswered = answers[idx] !== undefined;
         const isCurrent = idx === current;
@@ -22,13 +22,13 @@ export default function ProgressBar({
             key={idx}
             onClick={() => setCurrent(idx)}
             className={`
-              w-7 h-7 rounded-md border transition
+              w-8 h-8 rounded-lg border transition
               ${
                 isAnswered
                   ? "bg-green-300 border-green-600"
-                  : "bg-white border-gray-400"
+                  : "bg-white border-gray-300"
               }
-              ${isCurrent ? "ring-2 ring-pink-500 scale-110" : ""}
+              ${isCurrent ? "ring-2 ring-pink-400 scale-110" : ""}
             `}
           />
         );
