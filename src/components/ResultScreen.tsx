@@ -27,9 +27,11 @@ export default function ResultScreen({
 
         {/* ✅ COMMENT THEO ĐIỂM */}
         <div className="mt-4 text-lg font-semibold text-pink-700">
-          {score < 10 && <p>Chưa tài đâu con ạ, con non lắm 😏</p>}
+          {score < 10 && <p>Chưa tài đâu con ạ, còn phải học thêm nhé 😏</p>}
 
-          {score >= 10 && score < 15 && <p>Cũng được đó 😌 cố thêm tí nữa!</p>}
+          {score >= 10 && score < 15 && (
+            <p>Cũng được đó 😌 cố thêm tí nữa là tài</p>
+          )}
 
           {score >= 15 && score < 20 && <p>Ghê nha! Học bổng gọi tên 🎓⚡</p>}
 
@@ -37,7 +39,7 @@ export default function ResultScreen({
 
           {score === 25 && (
             <p className="text-green-600 text-xl font-extrabold">
-              Vô đối! 🚀🔥 Google cũng xin thua bạn 🤯
+              Vô đối! 🚀🔥 Google và tôi cũng xin thua bạn 🤯
             </p>
           )}
         </div>
