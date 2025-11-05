@@ -1,5 +1,3 @@
-import React from "react";
-
 type MissingModalProps = {
   missingQuestions: number[];
   answers: Record<number, number>;

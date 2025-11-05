@@ -25,7 +25,6 @@ export default function QuestionCard({
   selectedQuestions,
   answers,
   handleAnswer,
-  setCurrent,
   missingQuestions,
   setShowMissing,
   setFinished,
