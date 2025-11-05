@@ -12,7 +12,7 @@ export function useQuiz() {
   const [shake, setShake] = useState(false);
   const [questionStart, setQuestionStart] = useState(Date.now());
   const [fastMode, setFastMode] = useState(false);
-  const [fastTimer, setFastTimer] = useState<null>(null);
+  const [fastTimer, setFastTimer] = useState<number | null>(null);
   const fastRef = useRef<HTMLDivElement | null>(null);
 
   const selectedQuestions = quizSet
