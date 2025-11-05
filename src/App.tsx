@@ -41,7 +41,7 @@ export default function App() {
     if (!fastMode) return;
 
     // Trigger CSS animation
-    const play = (ref: React.RefObject<HTMLDivElement>, css: string) => {
+    const play = (ref: any, css: string) => {
       if (!ref.current) return;
       ref.current.classList.remove(css);
       void ref.current.offsetWidth;
