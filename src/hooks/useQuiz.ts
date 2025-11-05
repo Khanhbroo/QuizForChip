@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import { questions } from "../questions";
 
 export function useQuiz() {
@@ -10,6 +10,10 @@ export function useQuiz() {
   const [showMissing, setShowMissing] = useState(false);
   const [animating, setAnimating] = useState<"in" | "out" | null>(null);
   const [shake, setShake] = useState(false);
+  const [questionStart, setQuestionStart] = useState(Date.now());
+  const [fastMode, setFastMode] = useState(false);
+  const [fastTimer, setFastTimer] = useState<NodeJS.Timeout | null>(null);
+  const fastRef = useRef<HTMLDivElement | null>(null);
 
   const selectedQuestions = quizSet
     ? questions.slice((quizSet - 1) * 25, quizSet * 25)
@@ -24,23 +28,46 @@ export function useQuiz() {
   ).length;
 
   const handleAnswer = (index: number) => {
-    // lưu đáp án
+    const now = Date.now();
+    const elapsed = (now - questionStart) / 1000; // tính giây trả lời
+
+    // ✅ Nếu trả lời dưới 10 giây → kích hoạt hiệu ứng
+    if (elapsed < 10) {
+      setFastMode(true);
+
+      // clear timer cũ nếu đang tồn tại
+      if (fastTimer) {
+        clearTimeout(fastTimer);
+      }
+
+      const t = setTimeout(() => {
+        setFastMode(false);
+      }, 700); // animation 0.7s rất mượt
+
+      setFastTimer(t);
+    }
+
+    // ✅ Lưu đáp án
     const newAnswers = { ...answers, [current]: index };
     setAnswers(newAnswers);
 
-    // Không auto submit ở câu cuối
-    if (current === selectedQuestions.length - 1) {
-      // Chỉ lưu đáp án rồi dừng
-      // ✅ Không animation, không finish
-      return;
-    }
+    // ✅ Nếu chưa phải câu cuối → chuyển câu có animation
+    if (current < selectedQuestions.length - 1) {
+      setAnimating("out");
 
-    // Nếu chưa phải câu cuối → chạy animation chuyển
-    setAnimating("out");
-    setTimeout(() => {
-      setCurrent(current + 1);
-      setAnimating("in");
-    }, 250);
+      setTimeout(() => {
+        setCurrent(current + 1);
+        setAnimating("in");
+        setQuestionStart(Date.now()); // ✅ reset thời gian câu mới
+      }, 250);
+    } else {
+      // ✅ Đã đến câu cuối → không auto nộp
+      if (missingQuestions.length === 0) {
+        setShowMissing(false);
+      } else {
+        setShowMissing(true);
+      }
+    }
   };
 
   const goToQuestion = (index: number) => {
@@ -59,6 +86,8 @@ export function useQuiz() {
     setCurrent(0);
     setFinished(false);
     setTimeLeft(1500);
+    setShowMissing(false);
+    setAnimating(null);
   };
 
   useEffect(() => {
@@ -93,5 +122,7 @@ export function useQuiz() {
     shake,
     setShake,
     goToQuestion,
+    fastMode,
+    fastRef,
   };
 }

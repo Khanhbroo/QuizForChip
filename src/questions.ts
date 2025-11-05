@@ -1771,7 +1771,7 @@ export const questions = [
       "Tốc độ cài đặt phần mềm nhanh nhất để rút ngắn thời gian.",
       "Phân quyền cho từng cá nhân tự thực hiện theo cách riêng để tăng tính linh hoạt.",
     ],
-    answer: 3,
+    answer: 0,
   },
   {
     id: 150,
