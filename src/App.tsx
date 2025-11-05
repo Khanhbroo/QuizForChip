@@ -102,9 +102,9 @@ export default function App() {
   } = useQuiz();
 
   // hiệu ứng nhanh
-  const fastRef = useRef<null>(null);
-  const speedRef = useRef<null>(null);
-  const ultraRef = useRef<null>(null);
+  const fastRef = useRef<HTMLDivElement | null>(null);
+  const speedRef = useRef<HTMLDivElement | null>(null);
+  const ultraRef = useRef<HTMLDivElement | null>(null);
 
   const [fastText, setFastText] = useState("Nhanh ghê! 😎");
   const [fireIcon, setFireIcon] = useState("🔥");
