@@ -128,8 +128,8 @@ export default function App() {
     );
 
     // chạy animation như cũ
-    const play = (ref: React.RefObject<HTMLDivElement>, css: string) => {
-      if (!ref.current) return;
+    const play = (ref: any, css: string) => {
+      if (!ref?.current) return;
       ref.current.classList.remove(css);
       void ref.current.offsetWidth;
       ref.current.classList.add(css);
